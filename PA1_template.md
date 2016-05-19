@@ -189,7 +189,7 @@ With the methodology used for imputing missing data, the mean total number of st
 ##add column to impute_values with the weekday
 impute_values <- mutate(impute_values, day = weekdays(date))
 
-##convert day column to either "weekend" or "weekday" based on day entry
+##convert day column to either "weekend" or "weekday" category based on day entry
 for(i in 1:nrow(impute_values)){
     if(impute_values[i,4] %in% c("Saturday","Sunday")) {
         impute_values[i,4] = "weekend"

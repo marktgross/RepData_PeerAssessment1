@@ -232,7 +232,7 @@ imputed_md &lt;- format(median(imputed_dailytotal),scientific = FALSE)</code></p
 <pre class="r"><code>##add column to impute_values with the weekday
 impute_values &lt;- mutate(impute_values, day = weekdays(date))
 
-##convert day column to either &quot;weekend&quot; or &quot;weekday&quot; based on day entry
+##convert day column to either &quot;weekend&quot; or &quot;weekday&quot; category based on day entry
 for(i in 1:nrow(impute_values)){
     if(impute_values[i,4] %in% c(&quot;Saturday&quot;,&quot;Sunday&quot;)) {
         impute_values[i,4] = &quot;weekend&quot;
