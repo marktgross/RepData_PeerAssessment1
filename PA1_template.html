@@ -199,6 +199,7 @@ new &lt;- merge(act,avg) %&gt;%
        arrange(date, interval)
 
 ##use for loop to replace NA values in &quot;steps&quot; with daily interval averages
+##after merge/arrange, in &quot;new&quot; df column 1 = interval, col 2 = steps, col 3 = date, col 4 = avg_steps
 for(i in 1:nrow(new)){
     if(!is.na(new[i,2])) {
         new[i,2] = new[i,2]
